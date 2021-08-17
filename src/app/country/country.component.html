@@ -1,0 +1,40 @@
+<form [formGroup]="countryForm">
+    <div class="form-group">
+        <div class="row mrgnTop">
+            <div class="col-md-3">
+                Country Name
+            </div>
+            <div class="col-md-3">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Country Name</mat-label>
+                    <input matInput formControlName="countryname" />
+                    <mat-error *ngIf="countryForm.get('countryname').hasError('required')">
+                        Country Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3">
+                <input type="button" *ngIf="isUpdate==false" class="btn btn-success" value="Save" (click)="Save()" />
+                <input type="button" *ngIf="isUpdate==true" class="btn btn-success" value="Update" (click)="Update()" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<h1>Country Name</h1>
+<div style="padding-top:10px">
+<table class="table table-hover">
+    <tr>
+        <th>Country Name</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let a of countryList">
+        <td>{{a.countryname1}}</td>
+        <td>
+            <button mat-icon-button (click)="Update_click(a.id)" color="primary">
+                <mat-icon>edit</mat-icon> </button>
+        </td>
+    </tr>
+</table>
+</div>

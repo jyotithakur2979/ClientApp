@@ -1,0 +1,29 @@
+<button class="btn btn-success btn-sm" [routerLink]="['/Clg']">
+    Add New <mat-icon>add</mat-icon>
+</button>
+
+<div style="padding-top:10px">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>MobileNo</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let obj of Clg">
+            <td>{{obj.id}}</td>
+            <td>{{obj.name}}</td>
+            <td>{{obj.mobileno}}</td>
+            <td>
+                <button mat-icon-button (click)="Delete_click(obj.id)" color="warn">
+                    <mat-icon>delete</mat-icon> </button>
+            </td>
+            <td>
+                <button mat-icon-button (click)="Update_click(obj.id)" color="warn">
+                    <mat-icon>edit</mat-icon> </button>
+            </td>
+        </tr>
+    </table>
+
+</div>

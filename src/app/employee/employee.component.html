@@ -1,0 +1,72 @@
+<div class="alert-info" *ngIf="status">
+  Data is saved successfully
+</div>
+<form [formGroup]="emoloyeeForm">
+<div class="form-group" >
+  <div class="row mrgnTop">
+    <div class="col-md-3">
+      Employe Name
+    </div>
+    <div class="col-md-3">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Employee Name</mat-label>
+        <input matInput formControlName="employeenane" />
+        <mat-error *ngIf="emoloyeeForm.get('employeenane').hasError('required')">
+          Employee Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mrgnTop">
+    <div class="col-md-3">
+      Company Name
+    </div>
+    <div class="col-md-3">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Company Name</mat-label>
+        <input matInput  formControlName="companyname" />
+        <mat-error *ngIf="emoloyeeForm.get('companyname').hasError('required')">
+          Company Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mrgnTop">
+    <div class="col-md-3">
+      Mobile No.
+    </div>
+    <div class="col-md-3">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Mobile No.</mat-label>
+        <input matInput formControlName="mobileno" />
+        <mat-error *ngIf="emoloyeeForm.get('mobileno').hasError('required')">
+          Mobile no. is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      Email Id
+    </div>
+    <div class="col-md-3">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email Id</mat-label>
+        <input matInput  formControlName="emailid" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+      <input type="button" *ngIf="isUpdate==false" class="btn btn-success" value="Save" (click)="Save()" />
+      <input type="button" *ngIf="isUpdate==true" class="btn btn-success" value="Update" (click)="Update()" />
+    </div>
+  </div>
+</div>
+</form>
+
+
+
+  

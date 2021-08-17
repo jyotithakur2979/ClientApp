@@ -1,0 +1,37 @@
+<h2>Report Cards</h2>
+<button class="btn btn-success btn-sm" [routerLink]="['/add-card']">Add New</button>
+
+<button class="btn btn-success btn-sm" [routerLink]="['/add-card-demo']">Add Demo card</button>
+
+<div style="padding-top:10px">
+  <table class="table table-bordered">
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Hindi</th>
+      <th>English</th>
+      <th>Math</th>
+      <th>Physics</th>
+      <th>Chemistry</th>
+      <th>Total</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let card of data">
+      <td>{{card.rollNo}}</td>
+      <td>{{card.name}}</td>
+      <td>{{card.hindi}}</td>
+      <td>{{card.eng}}</td>
+      <td>{{card.maths}}</td>
+      <td>{{card.phs}}</td>
+      <td>{{card.chy}}</td>
+      <td> {{card.hindi+card.eng+card.maths+card.phs+card.chy}}  </td>
+      <td>
+        <input type="button" class="btn btn-success" value="Delete" (click)="Delete_click(card.id)" />
+      </td>
+      <td>
+        <input type="button" class="btn btn-success" value="Update" (click)="Update_click(card.id)" />
+      </td>
+    </tr>
+  </table>
+</div>

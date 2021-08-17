@@ -1,0 +1,48 @@
+<div class="alert-info" *ngIf="status">
+  Data is saved successfully
+</div>
+<form  [formGroup]="ClgForm">
+<div class="form-group">
+    <div class="row mrgnTop">
+        <div class="col-md-3">
+          Name
+        </div>
+        <div class="col-md-3">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label> Name</mat-label>
+            <input matInput formControlName="name" />
+            <mat-error *ngIf="ClgForm.get('name').hasError('required')">
+               Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <br />
+      <div class="row mrgnTop">
+        <div class="col-md-3">
+          MobileNo
+        </div>
+        <div class="col-md-3">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label> MobileNo</mat-label>
+            <input matInput formControlName="mobileno" />
+            <mat-error *ngIf="ClgForm.get('mobileno').hasError('required')">
+               MobileNo is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+          <input type="button" *ngIf="isUpdate==false" class="btn btn-success" value="Save" (click)="Save()" />
+          <input type="button" *ngIf="isUpdate==true" class="btn btn-success" value="Update" (click)="Update_click()" />
+           
+        </div>
+      </div>
+</div>
+</form>
+
+

@@ -1,0 +1,58 @@
+<h2>Employee-List</h2>
+<button class="btn btn-success btn-sm" [routerLink]="['/employee-list']">
+    Add New <mat-icon>add</mat-icon>
+</button>
+
+
+<div style="padding-top:10px">
+    <table class="table table-bordered" *ngIf="emplList">
+        <tr>
+            <th>ID</th>
+            <th>Employe Name</th>
+            <th>Company Name</th>
+            <th>Mobile No.</th>
+            <th>Email Id</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let obj of emplList">
+            <td>{{obj.id}}</td>
+            <td>{{obj.employename}}</td>
+            <td>{{obj.companyname}}</td>
+            <td>{{obj.mobileno}}</td>
+            <td>{{obj.emailid}}</td>
+            <td>
+                <button mat-icon-button (click)="Delete_click(obj.id)" color="warn">
+                    <mat-icon>delete</mat-icon> </button>
+            </td>
+            <td>
+              
+                <button mat-icon-button (click)="Update_click(obj.id)" color="primary">
+                    <mat-icon>edit</mat-icon> </button>
+             </td>
+        </tr>
+    </table>
+</div>
+
+<div class="row">
+    <div class="col-md-3" *ngFor="let obj of emplList">
+        <div class="card" style="width:200px">
+            <img src="./assets/image/im1.jpg" style="width: 100px;" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{obj.employename}}</h5>
+                <p class="card-text">{{obj.companyname}}</p>
+                <p>{{obj.emailid}}</p>
+                <button mat-icon-button (click)="Delete_click(obj.id)" color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button (click)="Update_click(obj.id)" color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

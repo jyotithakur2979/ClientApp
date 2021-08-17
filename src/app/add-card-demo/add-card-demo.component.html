@@ -1,0 +1,72 @@
+<div class="form-group" [formGroup]="cardform">
+  <div class="row">
+    <div class="col-md-3">
+      Roll.No
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="rollno" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Name
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="name" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Hindi
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="hindi" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      English
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="eng" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Maths
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="math" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Physics
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" fromControlName="phy" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Chemistry
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="chy" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+      <input type="button" class="btn btn-success" value="Submit" (click)="saveData()" />
+    </div>
+  </div>
+</div>

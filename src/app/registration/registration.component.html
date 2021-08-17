@@ -1,0 +1,46 @@
+<div class="form-group" [formGroup]="registrationForm">
+  <div class="row">
+    <div class="col-md-3">
+      Name
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="name" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Email Id
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="emailid" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Password
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="password" formControlName="password" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      Mobile.No
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" type="text" formControlName="mobileno" />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+      <input type="button" class="btn btn-success" value="Submit" (click)="saveData()" />
+    </div>
+  </div>
+</div>
+<div class="loader" *ngIf="loaderStatus"></div>
