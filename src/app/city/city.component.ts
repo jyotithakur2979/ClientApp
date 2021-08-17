@@ -64,7 +64,7 @@ export class CityComponent implements OnInit {
         } 
       );
     }else{
-      this.cityForm.markAllAsTouched();
+      this.cityForm.markAllAsTouched(); 
     }
 
   }
