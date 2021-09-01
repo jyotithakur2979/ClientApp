@@ -1,0 +1,32 @@
+<div style="padding-top:10px">
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>Password</th>
+            <th>Mobile.No</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let obj of registrationList">
+            <td>{{obj.name}}</td>
+            <td>{{obj.emailid}}</td>
+            <td>{{obj.password}}</td>
+            <td>{{obj.mobileno}}</td>
+            <td>{{obj.cityName}}</td>
+            <td>{{obj.countryName}}</td>
+            <td>
+                <button mat-icon-button (click)="Update_click(obj.id)" color="primary">
+                    <mat-icon>edit</mat-icon> </button>
+            </td>
+            <td>
+                <button mat-icon-button (click)="Delete_click(obj.id)" color="warn">
+                    <mat-icon>delete</mat-icon> </button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
